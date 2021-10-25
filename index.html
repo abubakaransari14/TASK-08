@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: green;">
+        Pakistan Zindabad
+      </h1>
+      <h3>
+        Program to calculate days left until
+        next 14-August using JavaScript?
+      </h3>
+      
+</body>
+<script>
+    
+    let today = new Date();
+  
+
+    let indepedanceDay = today.getFullYear();
+
+    if (today.getMonth() == 11 &&
+        today.getDate() > 14) {
+  
+     
+      indepedanceDay = indepedanceDay + 1;
+    }
+  
+   
+    let christmasDate = 
+        new Date(indepedanceDay, 11, 14);
+  
+ 
+    let dayMilliseconds =
+        1000 * 60 * 60 * 24;
+  
+   
+    let remainingDays = Math.ceil(
+      (christmasDate.getTime() - today.getTime()) /
+      (dayMilliseconds)
+    );
+  
+    
+    document.write("There are " + remainingDays +
+                   " days remaining until 14-Aug.");
+  </script>
+</html>
